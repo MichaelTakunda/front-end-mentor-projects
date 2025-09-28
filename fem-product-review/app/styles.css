@@ -1,0 +1,249 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap'); */
+
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+    font-family: Fraunces;
+    font-style: normal;
+    font-weight: 300;
+    src: url(../assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: Fraunces;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format(truetype);
+}
+
+:root{
+    
+    --ff-montserrat : Montserrat, sans-seriff;
+    --ff-fruances: Fraunces, sans-seriff;
+
+    --fw-light: 200;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-xsmall: 0.75rem;
+    --fs-mid: 1.25rem;
+    --fs-large: 1.5rem;
+
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    --vdark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue:  hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+html{
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-light);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.2;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--cream);
+    overflow: hidden;
+}
+
+.container{
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white);
+    border-radius: 8px;
+
+}
+
+img{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.details{
+    width: 300px;
+    padding: 36px;
+}
+
+h2{
+    font-size: var(--fs-xsmall);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    padding-block: 8px;
+    margin-block-end: 14px;
+}
+
+h3{
+    font-family: var(--ff-fruances);
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 0.9;
+    color: var(--vdark-blue);
+
+    margin-block-end: 16px;
+}
+
+p{
+    font-size: 12px;
+    color: var(--dark-grayish-blue);
+    margin-block-end: 12px;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.current-price{
+    font-size: 28px;
+    font-family: var(--ff-fruances);
+    color: var(--dark-cyan);
+    font-weight: var(--fw-bold);
+
+    padding-inline-end: 32px;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+
+button{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 230px;
+
+    font-size: 12px;
+
+    background-color: var(--dark-cyan);
+    margin-block-start: 12px;
+    padding-block: 14px;
+    border-radius: 8px;
+    border: none;
+}
+
+button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+
+button:hover::after{
+    opacity: .8;
+    cursor: pointer;
+}
+
+.icon{
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--ff-montserrat);
+    color: var(--white);
+
+    padding-inline-start: 9px;
+    z-index: 1;
+ 
+}
+
+@media (max-width: 682px) {
+
+    .container{
+        max-width: 600px;
+        max-height: 600px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    .details{
+        padding: 20px;
+    }
+    h2{
+        font-size: 10px;
+        margin-block-end: 8px;
+    }
+    h3{
+        font-size: 28px;
+        margin-block-end: 8px;
+    }
+    p{
+        margin-block-end: 8px;
+    }
+    button{
+        width: 250px;
+        padding-block: 16px;
+        margin-block-start: 8px;
+    }
+}
