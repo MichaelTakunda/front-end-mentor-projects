@@ -1,0 +1,203 @@
+@font-face {
+    font-family:'Figtree';
+    font-style: normal;
+    font-weight: 200;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+ }
+
+ @font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+ }
+
+ @font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 600;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+ }
+
+ @font-face {
+   font-family: 'Figtree';
+   font-style: normal;
+   font-weight: 800;
+   src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+}
+
+ @font-face {
+    font-family: 'Figtree';
+    font-style: italic;
+    font-weight: 400;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+ }
+
+/* Custom Properties */
+
+ :root{
+
+--ff-figtree: 'Figtree', sans-serif;
+
+/* Font Weights */
+
+--fw-light: 200;
+--fw-normal: 400;
+--fw-medium: 600;
+--fw-bold: 800;
+
+/* Font Sizes */
+
+--fs-100: 0.75rem;
+--fs-200: 0.875rem;
+--fs-400: 1rem;
+--fs-600: 1.125rem;
+--fs-900: 1.5rem;
+
+/* Colors */
+
+--clr-body-bg:hsl(47, 88%, 63%);
+--clr-card-bg:hsl(0, 0%, 100%);
+--clr-heading-text:  hsl(0, 0%, 7%);
+--clr-body-text:hsl(0, 0%, 50%);
+
+
+ }
+
+ /* Page Reset */
+
+ *,
+ *::before,
+ *::after{
+   box-sizing: border-box;
+ }
+
+ *{
+   margin: 0;
+   padding: 0;
+ }
+
+ img{
+   max-width: 100%;
+   display: block;
+ }
+
+ html{
+   margin:0;
+   font-family: var(--ff-figtree);
+   font-weight: var(--fw-normal);
+   color: var(--clr-heading-text);
+   line-height: 1.5;
+   text-align: left;
+ }
+
+ h1,
+ h2,
+ h3{
+   line-height: 1.2;
+ }
+
+
+ body{
+   background-color: var(--clr-body-bg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100vw;
+   height: 100vh;
+
+ }
+
+ .container{
+   background-color: var(--clr-card-bg);
+   border: 1px black solid;
+   border-radius: 0.9375rem;
+   padding: 1.125rem;
+   box-shadow: 0.3125rem 0.3125rem 0 0.0625rem black;
+   width: 18.75rem;
+
+ }
+
+ img{
+   border-radius: 0.75rem;
+ }
+
+ .btn{
+   font-size: var(--fs-400);  
+   font-weight: var(--fw-bold);
+   display: inline-block;
+   background-color: var(--clr-body-bg);
+   padding-block: 0.3125rem;
+   padding-inline: 0.625rem;
+   margin-top: 1.25rem;
+   margin-bottom: 0;
+   border: none;
+   border-radius: 0.25rem;
+ }
+
+ .date{
+   font-size: var(--fs-200);
+   font-weight: var(--fw-normal);
+   margin-top: 0.625rem;
+   margin-bottom: 0.9375rem;
+ }
+
+ .main-heading{
+   font-size: var(--fs-600);
+ }
+
+ .information-text{
+   font-size: var(--fs-100);
+   font-weight: var(--fw-normal);
+   color: var(--clr-body-text);
+   margin-block: 0.9375rem;
+ }
+
+ .profile{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: flex-start;
+ }
+
+.profile-avatar{
+   width: 2rem;
+   height: 2rem;
+}
+
+h5{
+  padding-inline: 0.625rem;
+}
+
+ .attribution{
+   position: absolute;
+   bottom: 0.625rem;
+ }
+
+ /* Psuedo Classes */
+
+ .main-heading:hover  {
+  color: var(--clr-body-bg);
+  cursor: pointer;
+  caret-color:black;
+ }
+
+.container:hover {
+  box-shadow: 0.5rem 0.5rem 0 0.3125rem black;
+}
+
+@media screen and (max-width: 56.25rem) {
+  
+  .container{
+    width: 17rem;
+  }
+
+  .attribution{
+    font-size: var(--fs-100);
+  }
+
+} 
+  
+
