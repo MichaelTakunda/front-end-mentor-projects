@@ -1,0 +1,222 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Young Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/young-serif-v2-latin-regular.woff2') format('woff2'); 
+  }
+
+  /* outfit-regular - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/outfit-v11-latin-regular.woff2') format('woff2'); 
+  }
+  /* outfit-600 - latin */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/outfit-v11-latin-600.woff2') format('woff2'); 
+  }
+  /* outfit-700 - latin */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/outfit-v11-latin-700.woff2') format('woff2'); 
+  }
+
+  :root{
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-rose-white: hsl(330, 100%, 98%);
+    --clr-eggshell-body-bg: hsl(30, 54%, 90%);
+    --clr-light-grey: hsl(30, 18%, 87%);
+    --clr-wenge-brown: hsl(30, 10%, 34%);
+    --clr-dark-charcoal: hsl(24, 5%, 18%);
+    --clr-nutmeg: hsl(14, 45%, 36%);
+    --clr-dark-raspberry: hsl(332, 51%, 32%);
+
+    --fw-regular: 400;
+    --fw-mid: 600;
+    --fw-bold: 700;
+
+    --ff-young-serif: 'Young Serif', sans-serif;
+    --ff-outfit: 'Outfit', sans-serif;
+
+    --fs-l: 1.75rem;
+    --fs-m: 1.25rem;
+    --fs-s: 1rem;
+    --fs-xs: 0.875rem;
+    --fs-body: 0.9375rem;
+    
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+html{
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-light);
+    color: var(--clr-dark-charcoal);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.2;
+}
+
+a, a:visited, a:active{
+    text-decoration: none;
+    color: var(--clr-eggshell-body-bg);
+}
+
+body{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+
+     background-color: var(--clr-eggshell-body-bg);
+}
+
+.wrapper-container{
+  width: 575px;
+  padding-inline: 32px;
+  padding-block: 32px;
+  margin: 20px;
+
+  background-color: var(--clr-white);
+  border: none;
+  border-radius: 22px;
+}
+
+img{
+  border-radius: 12px;
+  /* border-top-right-radius: 12px; */
+
+  margin-block-end: 24px;
+}
+
+h1{
+  font-family: var(--ff-young-serif);
+  font-weight: 400;
+  font-size: var(--fs-l);
+  color: var(--clr-dark-charcoal);
+  letter-spacing: 0.5px;
+
+  margin-block-end: 24px;
+}
+
+h2{
+  font-family: var(--ff-outfit);
+  font-weight: 600;
+  font-size: var(--fs-s);
+  color: var(--clr-dark-raspberry);
+
+  margin-block-end: 16px;
+}
+
+h3{
+  font-family: var(--ff-young-serif);
+  font-weight: 400;
+  font-size: var(--fs-m);
+  color: var(--clr-nutmeg);
+  letter-spacing: 0.8px;
+
+  margin-block: 24px;
+}
+
+p{
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--clr-wenge-brown);
+
+  margin-block-end: 24px;
+}
+
+ul > li{
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  list-style-position: inside;
+}
+
+span{
+  font-weight: 600;
+  color: var(--clr-dark-charcoal);
+  font-size: var(--fs-xs);
+}
+
+/* hr{
+  padding-block: 14px;
+} */
+
+.preparation-section{
+  background-color: var(--clr-rose-white);
+  padding-inline: 22px;
+  padding-block-start: 20px;
+  padding-block-end: 22px;
+
+  border-radius: 12px;
+}
+
+.ingredients-section{
+  padding-block-end: 24px;
+}
+
+/* .line{
+  border-bottom: 0.2px solid var(--clr-dark-charcoal);
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+} */
+
+.ordered-list{
+  /* display: flex; */
+  list-style-position: inside;
+  list-style-type: decimal;
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  
+  display: inline-block;
+}
+
+.flex-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px var(--clr-light-grey) solid;
+  padding: 0.75rem .5rem;
+}
+
+.flex-item > span{
+  font-weight: var(--fw-bold);
+  color: var(--clr-nutmeg);
+}
+
+.flex-item > span:last-child{
+  border: none;
+}
+
+
