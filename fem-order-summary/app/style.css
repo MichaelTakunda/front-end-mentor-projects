@@ -1,0 +1,238 @@
+@font-face {
+    font-family: Red-Hat-Display;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../assets/fonts/RedHatDisplay-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+    font-family: Red-Hat-Display;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../assets/fonts/RedHatDisplay-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+    font-family: Red-Hat-Display;
+    font-style: normal;
+    font-weight: 900;
+    src: url(../assets/fonts/RedHatDisplay-VariableFont_wght.ttf) format(truetype);
+}
+
+
+:root{
+    
+    --ff-red-hat-display : Red-Hat-Display, sans-seriff;
+
+    --fw-regular: 500;
+    --fw-semi-bold: 700;
+    --fw-bold: 900;
+
+    --fs-small: 0.875rem;
+    --fs-regular: 1rem;
+    --fs-mid: 1.5rem;
+
+    --clr-pale-blue:hsl(225, 100%, 94%);
+    --clr-very-pale-blue:hsl(225, 100%, 98%);
+    --clr-bright-blue:hsl(245, 75%, 52%);
+    --clr-desaturated-blue:hsl(224, 23%, 55%);
+    --clr-dark-blue:hsl(223, 47%, 23%);
+    --clr-white:hsl(0, 0%, 100%);
+
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+html{
+    font-family: var(--ff-red-hat-display);
+    font-weight: var(--fw--semi-bold);
+    line-height: 1.5;
+    /* background-color: var(--clr-very-pale-blue); */
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.5;
+}
+
+p{
+    line-height: 1.5;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+
+    background-color: var(--clr-pale-blue);
+    background-image: url(../assets/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    
+}
+
+.wrapper{
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--clr-very-pale-blue);
+    border: none;
+    border-radius: 16px;
+}
+
+.hero-illustration{
+
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    margin-block-start: 0;
+    margin-block-end: 40px;
+}
+
+.sub-wrapper{
+    width: 300px;
+    padding-inline: auto;
+   
+}
+
+h1{
+    font-size: var(--fs-mid);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-blue);
+    text-align: center;
+
+    margin-block-end: 16px;
+}
+
+p{
+    font-family: inherit;
+    font-size: var(--fs-small);
+    color: var(--clr-desaturated-blue);
+    font-weight: var(--fw-regular);
+    text-align: center;
+
+    margin-block-end: 24px;
+}
+
+.pricing-plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+    gap: 12px;
+
+    background-color: var(--clr-very-pale-blue);
+    border: none;
+    border-radius: 12px;
+
+    margin-block-end: 20px;
+}
+
+.icon{
+    display: flex;
+    gap: 16px;
+    flex: 1;
+}
+
+.music-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.current-plan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: auto;
+    height: 100%;
+}
+
+.current-plan h2{
+    font-size: var(--fs-small);
+    color: var(--clr-dark-blue);
+}
+
+.current-plan p{
+    color: var(--clr-desaturated-blue);
+}
+
+h3 a{
+    font-size: var(--fs-small);
+    color: var(--clr-bright-blue);
+}
+
+h3 a:hover{
+    cursor: pointer;
+    opacity: 60%;
+    transition: .5s ease-in-out;
+}
+
+#proceed{
+    width: 300px;
+
+    font-family: inherit;
+    font-weight: var(--fw-semi-bold);
+    background-color: var(--clr-bright-blue);
+    color: var(--clr-very-pale-blue);
+    border: none;
+    border-radius: 8px;
+
+    padding-inline: 40px;
+    padding-block: 10px;
+    margin-block-end: 16px;
+
+}
+
+#proceed:hover{
+    opacity: 60%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#cancel{
+    width: 300px;
+    position: relative;
+
+    font-family: inherit;
+    font-weight: var(--fw-semi-bold);
+    background-color: var(--clr-very-pale-blue);
+    color: var(--clr-desaturated-blue);
+    border: none;
+    border-radius: 8px;
+
+    padding-inline: 40px;
+    padding-block: 10px;
+    margin-block-end: 24px;
+} 
+
+
+#cancel:hover{
+    cursor: pointer;
+    color: var(--clr-dark-blue);
+    font-weight: var(--fw-bold);
+    transition: .5s ease-in-out;
+}
+
