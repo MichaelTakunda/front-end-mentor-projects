@@ -1,0 +1,272 @@
+/* @media screen (min-width: 30em / min-width >= 30em) {
+    
+}
+@media screen (max-width: 30em / max-width <= 30em) {
+    
+} */
+
+
+@font-face {
+    font-family: 'LibreFranklin';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../assets/fonts/LibreFranklin-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'LibreFranklin';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../assets/fonts/LibreFranklin-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../assets/fonts/LibreFranklin-VariableFont_wght.ttf) format(truetype);
+}
+
+
+:root{
+
+    --ff-sans: 'LibreFranklin', sans-serif;
+
+    --fs-xsmall: 0.625rem;
+    --fs-msmall: 0.75rem;
+    --fs-small: 1.25rem;
+    --fs-medium: 1.5rem;
+    --fs-large: 2rem;
+    --fs-xlarge: 2.25rem;
+
+    --fw-light: 300;
+    --fw-bold: 600;
+    --fw-xbold: 700;
+
+
+    --clr-blue: hsl(223, 87%, 63%);
+
+    --clr-pale-blue: hsl(223, 100%, 88%);
+    --clr-light-red: hsl(354, 100%, 66%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-grey: hsl(0, 0%, 59%);
+    --clr-dark-blue: hsl(209, 33%, 12%);
+
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--ff-sans);
+    line-height: 1.7;
+    text-align: center;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+svg{
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3, h4{
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+body{
+    min-height: 100svh;
+    max-width: 69.375em;
+
+    margin-inline: auto;
+}
+
+.wrapper{
+    max-width: 34.375rem;
+    margin-inline: auto;
+
+}
+.logo{
+    margin-inline: auto;
+    padding-block: 2rem;
+
+    width: 60px;
+}
+.headine{
+    font-size: var(--fs-large);
+    font-weight: var(--fw-light);
+    color: var(--clr-grey);
+}
+
+h1{
+    font-size: var(--fs-large);
+    font-weight: var(--fw-light);
+    color: var(--clr-grey); 
+}
+
+span{
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-blue);
+}
+
+p{
+    padding-block: 1rem;
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin-block-start: .9rem;
+    margin-block-end: 3.5rem;
+}
+
+input{
+    width: 370px;
+
+    padding-block: 0.4375rem;
+    padding-inline-start: 1rem;
+
+    border: 0.5px var(--clr-grey) solid;
+    opacity: 0.3;
+    border-radius: 20px;
+}
+
+input::placeholder{
+    color: var(--clr-grey);
+    font-size: var(--fs-xsmall);
+    opacity: 1;
+}
+
+
+button{
+    position: relative;
+
+    margin-inline: 0.8rem;
+    padding-block: 0.6375rem;
+    padding-inline: 2rem;
+
+    border: none;
+    border-radius: 20px;
+    background-color: var(--clr-blue);
+
+    font-size: var(--fs-xsmall);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: var(--clr-pale-blue);
+    border-radius: 20px;
+    
+    opacity: 0;
+    transition: 1s all;
+}
+
+
+button:hover::after{
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.825rem;
+
+    margin-block-start: 3rem;
+    margin-block-end: 8px;
+}
+
+.socials a{
+    color: var(--clr-blue);
+    font-size: 10px;
+
+    border: 0.8px solid var(--clr-pale-blue);
+    border-radius: 50%;
+
+    padding: 8px;
+    
+}
+
+a:hover{
+    transition: all .7s;
+    background-color: var(--clr-blue);
+    color: var(--clr-pale-blue);
+}
+
+.licence{
+    font-size: var(--fs-xsmall);
+    color: var(--clr-grey);
+    font-weight: var(--fw-light);
+}
+
+@media screen and (max-width: 780px) {
+    .wrapper{
+        max-width: 400px;
+        margin:auto;
+    }
+    h1{
+        font-size: var(--fs-medium);
+    }
+    .input{
+        flex-direction: column;
+    }
+    .button{
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 430px){
+
+    .wrapper{
+        max-width: 300px;
+    }
+
+    h1{
+        font-size: var(--fs-small);
+    }
+
+    .logo{
+        padding-block-start: 4rem;
+
+        width:50px;
+    }
+    
+    .description{
+        font-size: var(--fs-msmall);
+    }
+
+    input{
+        width: 300px;
+    }
+
+    .button{
+        width: 300px;
+    }
+    .socials{
+        margin-block-start: 7rem;
+    }
+}
+
